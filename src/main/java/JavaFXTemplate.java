@@ -32,7 +32,7 @@ public class JavaFXTemplate extends Application {
 		 Rectangle rect = new Rectangle (100, 40, 100, 100);
 	     rect.setArcHeight(50);
 	     rect.setArcWidth(50);
-	     rect.setFill(Color.VIOLET);
+	     rect.setFill(Color.LIGHTPINK);
 
 	     RotateTransition rt = new RotateTransition(Duration.millis(5000), rect);
 	     rt.setByAngle(270);
