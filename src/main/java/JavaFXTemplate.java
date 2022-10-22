@@ -17,7 +17,6 @@ public class JavaFXTemplate extends Application {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		launch(args);
-		
 	}
 
 	//feel free to remove the starter code from this method
@@ -25,9 +24,8 @@ public class JavaFXTemplate extends Application {
 	public void start(Stage primaryStage) throws Exception {
 		// TODO Auto-generated method stub
 		primaryStage.setTitle("Welcome to Project #2");
-		
-				
-		
+
+
 		
 		 Rectangle rect = new Rectangle (100, 40, 100, 100);
 	     rect.setArcHeight(50);
@@ -43,7 +41,7 @@ public class JavaFXTemplate extends Application {
 	         rt
 	     );
 	     seqTransition.play();
-	     
+
 	     FadeTransition ft = new FadeTransition(Duration.millis(5000), rect);
 	     ft.setFromValue(1.0);
 	     ft.setToValue(0.3);
@@ -53,7 +51,7 @@ public class JavaFXTemplate extends Application {
 	     ft.play();
 	     BorderPane root = new BorderPane();
 	     root.setCenter(rect);
-	     
+
 	     Scene scene = new Scene(root, 700,700);
 			primaryStage.setScene(scene);
 			primaryStage.show();
