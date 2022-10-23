@@ -24,7 +24,6 @@ public class Deck extends ArrayList<Card> {
     }
 
 
-
     //
     // clears the deck of cards, creates a new deck of cards
     //

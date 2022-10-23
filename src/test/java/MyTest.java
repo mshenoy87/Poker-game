@@ -23,6 +23,8 @@ class MyTest {
 		deck = new Deck();
 	}
 
+
+
 	//
 	// tests card class and functions
 	//
@@ -98,5 +100,59 @@ class MyTest {
 		}
 	}
 
+
+
+	//
+	// test dealer class
+	//
+
+	@Test
+	void DealerConstructorTest() {
+		Dealer dealer = new Dealer();
+		assertEquals(dealer.getTheDeck().size(), 52, "Wrong size of theDeck");
+	}
+
+	@Test
+	void dealHand() {
+		// sets dealer's hand, tests the size
+		Dealer dealer = new Dealer();
+		dealer.setDealersHand();
+		assertTrue(dealer.getDealersHand().size() == 3, "wrong dealersHand size");
+		assertEquals(dealer.getTheDeck().size(), 49, "dealHand not working");
+	}
+
+	@Test
+	void theDeckSizeTest1() {
+		// tests if deck is decreasing in size (Cards are taken from the deck)
+		Dealer dealer = new Dealer();
+		dealer.setDealersHand();
+		assertEquals(dealer.getTheDeck().size(), 49, "dealHand not working 1");
+
+		ArrayList<Card> hand1 = dealer.dealHand();
+		assertEquals(dealer.getTheDeck().size(), 46, "dealHand not working 2");
+
+		ArrayList<Card> hand2 = dealer.dealHand();
+		assertEquals(dealer.getTheDeck().size(), 43, "dealHand not working 3");
+	}
+
+	@Test
+	void theDeckSizeTest2() {
+		// tests if a new deck is created when 34 cards are left
+		Dealer dealer = new Dealer();
+		dealer.setDealersHand();
+		assertEquals(dealer.getTheDeck().size(), 49, "setDealersHand not working 1");
+
+		ArrayList<Card> hand1 = dealer.dealHand();
+		dealer.dealHand();
+		dealer.dealHand();
+		dealer.dealHand();
+		dealer.dealHand();
+
+		assertEquals(dealer.getTheDeck().size(), 34, "dealHand not working 2");
+		assertEquals(hand1.size(), 3, "hand size incorrect");
+
+		dealer.setDealersHand();
+		assertEquals(dealer.getTheDeck().size(), 49, "setDealersHand not working 3");
+	}
 
 }
