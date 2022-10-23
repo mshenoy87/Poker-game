@@ -153,6 +153,7 @@ class MyTest {
 
 		dealer.setDealersHand();
 		assertEquals(dealer.getTheDeck().size(), 49, "setDealersHand not working 3");
+
 	}
 
 }
