@@ -13,6 +13,7 @@ class MyTest {
 	static Card card3;
 	static Card card4;
 	static Deck deck;
+	static Player player1;
 
 	@BeforeAll
 	static void setup() {
@@ -21,6 +22,7 @@ class MyTest {
 		card3 = new Card('H', 14);  // ace of hearts
 		card4 = new Card('D', 10);	// 10 of diamonds
 		deck = new Deck();
+		player1 = new Player();
 	}
 
 
@@ -153,6 +155,48 @@ class MyTest {
 
 		dealer.setDealersHand();
 		assertEquals(dealer.getTheDeck().size(), 49, "setDealersHand not working 3");
+
+	}
+
+
+
+
+	//
+	// test player class
+	//
+
+	@Test
+	void PlayerConstructorHand() {
+		// tests if hand is correct and the getHand function
+		assertEquals(player1.getHand().size(), 0, "playerHand is wrong size");
+
+	}
+
+	@Test
+	void PlayerConstructorAnte() {
+		// tests if getAnte is zero when created
+		assertEquals(player1.getAnteBet(), 0, "ante bet is not zero first");
+
+	}
+
+	@Test
+	void PlayerConstructorPlay() {
+		// tests if getPlayBet is zero when created
+		assertEquals(player1.getPlayBet(), 0, "play bet is not zero when created");
+
+	}
+
+	@Test
+	void PlayerConstructorPairPlus() {
+		// tests if getPairPlusBet is zero when created
+		assertEquals(player1.getPairPlusBet(), 0, "pair plus bet is not zero when created");
+
+	}
+
+	@Test
+	void PlayerConstructorTotalWinnings() {
+		// tests if getTotalWinnings is 0 when created
+		assertEquals(player1.getTotalWinnings(), 0, "total winnings not zero when game states");
 
 	}
 
