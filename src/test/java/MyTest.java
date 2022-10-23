@@ -151,6 +151,7 @@ class MyTest {
 		assertEquals(dealer.getTheDeck().size(), 34, "dealHand not working 2");
 		assertEquals(hand1.size(), 3, "hand size incorrect");
 
+		// checks if a new deck is created
 		dealer.setDealersHand();
 		assertEquals(dealer.getTheDeck().size(), 49, "setDealersHand not working 3");
 
