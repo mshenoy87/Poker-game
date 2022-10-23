@@ -29,8 +29,11 @@ class Player {
     //
     // sets player's hand to ArrayList passed as parameter
     //
-    // setPlayersHand
+    // setHand
     //
+    public void setHand(ArrayList<Card> hand) {
+        this.hand = hand;
+    }
 
 
     //
@@ -43,11 +46,15 @@ class Player {
     }
 
 
+
     //
     // sets ante bet to
     //
     // setAnteBet
     //
+    public void setAnteBet(int anteBet) {
+        this.anteBet = anteBet;
+    }
 
 
     //
@@ -59,11 +66,16 @@ class Player {
         return this.anteBet;
     }
 
+
+
     //
     // sets play bet to integer passed as parameter
     //
     // setPlayBet
     //
+    public void setPlayBet(int playBet) {
+        this.playBet = playBet;
+    }
 
 
     //
@@ -75,11 +87,16 @@ class Player {
         return this.playBet;
     }
 
+
+
     //
     // sets pair plus bet to integer passed as parameter
     //
     // setPairPlusBet
     //
+    public void setPairPlusBet(int pairPlusBet) {
+        this.pairPlusBet = pairPlusBet;
+    }
 
 
     //
@@ -91,11 +108,16 @@ class Player {
         return this.pairPlusBet;
     }
 
+
+
     //
     // calculates total winnings and stores it
     //
     // setTotalWinnings
     //
+    public void setTotalWinnings(int totalWinnings) {
+        this.totalWinnings = totalWinnings;
+    }
 
 
     //

@@ -200,4 +200,79 @@ class MyTest {
 
 	}
 
+	@Test
+	void PlayerHand() {
+		// tests dealing a hand and setting to player's hand
+		Dealer dealer = new Dealer();
+		ArrayList<Card> player1Hand = dealer.dealHand();
+
+		assertEquals(player1.getHand().size(), 0, "playerHand is wrong size before");
+		player1.setHand(player1Hand);
+		assertTrue(player1.getHand().size() == 3, "playerHand is wrong size after set");
+
+		// make sure that cards are matching with the dealer's hand
+		int i = 0;
+		for (Card c : player1.getHand()) {
+			assertEquals(c.getSuit(), player1Hand.get(i).getSuit(), "card is not equal");
+			i++;
+		}
+
+	}
+
+	@Test
+	void PlayerAnte() {
+		// tests set and get AnteBet
+		int number = 5;
+		assertEquals(player1.getAnteBet(), 0, "ante before");
+		player1.setAnteBet(number);
+		assertEquals(player1.getAnteBet(), 5, "wrong ante bet after");
+
+	}
+
+	@Test
+	void PlayerPlayBet() {
+		// tests set and get setPlayBet
+		int number = 10;
+		assertEquals(player1.getPlayBet(), 0, "play bet before");
+		assertEquals(player1.getAnteBet(), 0, "ante bet before");
+		player1.setPlayBet(number);
+
+		assertEquals(player1.getPlayBet(), 10, "wrong ante bet after");
+		assertEquals(player1.getAnteBet(), 0, "ante bet after");
+
+	}
+
+	@Test
+	void PlayerPairPlus() {
+		// tests set and get PairPlusBet
+		int number = 20;
+		assertEquals(player1.getPlayBet(), 0, "play bet before");
+		assertEquals(player1.getAnteBet(), 0, "ante bet before");
+		assertEquals(player1.getPairPlusBet(), 0, "Pair plus is not 0");
+
+		player1.setPairPlusBet(number);
+
+		assertEquals(player1.getPlayBet(), 0, "wrong ante bet after");
+		assertEquals(player1.getAnteBet(), 0, "ante bet after");
+		assertEquals(player1.getPairPlusBet(), 20, "Pair plus is wrong");
+
+	}
+
+	@Test
+	void PlayerTotalWinnings() {
+		// tests set and get TotalWinnings
+		int number = 0;
+		player1.setTotalWinnings(number);
+		assertEquals(player1.getTotalWinnings(), 0, "total winnings should be 0");
+
+		number = 10;
+		player1.setTotalWinnings(number);
+		assertEquals(player1.getTotalWinnings(), 10, "total winnings should be 10");
+
+		number = -100;
+		player1.setTotalWinnings(number);
+		assertEquals(player1.getTotalWinnings(), -100, "total winnings should be -100");
+
+	}
+
 }
