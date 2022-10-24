@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-public class TheeCardLogic {
+public class ThreeCardLogic {
 
     // private variables
 
@@ -35,7 +35,5 @@ public class TheeCardLogic {
     public int compareHands(ArrayList<Card> dealer, ArrayList<Card> player) {
         return 0;
     }
-
-
 
 }
