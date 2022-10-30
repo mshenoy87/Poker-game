@@ -1,3 +1,7 @@
-JavaFXTemplate.class
-Card.class
+cardComparator.class
 Deck.class
+ThreeCardLogic.class
+Player.class
+Card.class
+Dealer.class
+ThreeCardPokerGame.class
