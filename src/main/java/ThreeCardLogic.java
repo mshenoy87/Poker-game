@@ -150,7 +150,7 @@ public class ThreeCardLogic {
             if (evalDealer < evalPlayer) {
                 return 1;
             } else {
-                return ;
+                return 2;
             }
         }
 
