@@ -159,45 +159,4 @@ public class ThreeCardLogic {
     }
 
 
-
-
-
-
-
-
-
-//        if (playerHandResult != 0 && dealerHandResult != 0 &&
-//                playerHandResult != dealerHandResult) {
-//            if (dealerHandResult < playerHandResult) {
-//                // if dealer's number is smaller and not zero, return 1 - dealer won
-//                return 1;
-//            } else if (playerHandResult < dealerHandResult) {
-//                // if dealer number is bigger and not zero, return 2 - player won
-//                return 2;
-//            }
-//        }
-//        // go through the ArrayLists and check which hand has highest value
-//        // return appropriate value
-//
-//        // sort items ascending order (getting the largest last, smallest first)
-//        Collections.sort(player, new cardComparator());
-//        Collections.sort(dealer, new cardComparator());
-//
-//        // start from index 2, check cards
-//        for (int i = 2; i >= 0; i--) {
-//            // if dealer's is bigger, highCardWinner 1, break
-//            if (player.get(i).getValue() < dealer.get(i).getValue()) {
-//                return 1;
-//            } else if (dealer.get(i).getValue() < player.get(i).getValue()) {
-//                // if player's is bigger, highCardWinner 2, break
-//                return 2;
-//            }
-//        }
-//
-//        // if neither hand won (both numbers were equal), return 0
-//        return 0;
-//
-//        }
-
-
 }
