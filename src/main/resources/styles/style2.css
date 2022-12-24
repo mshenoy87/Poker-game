@@ -1,0 +1,55 @@
+.border {
+    -fx-padding: 4px;
+    -fx-background-color: #218867;
+}
+
+.vbox {
+    -fx-spacing: 10;
+    -fx-alignment: center;
+}
+
+#options {
+    -fx-padding: 5px;
+}
+
+#deal {
+    -fx-padding: 10px;
+    -fx-pref-width: 70px;
+}
+
+.button {
+    -fx-font: 15px Helvetica;
+    -fx-padding: 10px;
+    -fx-alignment: center;
+    -fx-background-color: #D4D4D4;
+}
+
+.hbox {
+    -fx-alignment: center;
+    -fx-spacing: 10;
+}
+
+#playerCards {
+    -fx-spacing: 75;
+}
+
+#dealerCards {
+    -fx-padding: 15px;
+}
+
+.totalWinnings {
+    -fx-background-color: #C5E1CB;
+    -fx-padding: 5px;
+    -fx-pref-width: 75px;
+
+}
+
+.winningsArea {
+    -fx-alignment: center;
+    -fx-spacing: 100;
+}
+
+.textArea {
+    -fx-font: 15px Monaco;
+}
+

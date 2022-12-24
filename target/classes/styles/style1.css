@@ -1,0 +1,14 @@
+.border {
+    -fx-background-color: #218867;
+}
+
+.vbox {
+    -fx-spacing: 10;
+    -fx-alignment: center;
+}
+
+.button {
+    -fx-font: 15px Helvetica;
+    -fx-padding: 15px;
+    -fx-background-color: #D4D4D4;
+}

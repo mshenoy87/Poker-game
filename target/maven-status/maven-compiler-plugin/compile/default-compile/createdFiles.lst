@@ -1,7 +1,10 @@
 cardComparator.class
-Deck.class
 ThreeCardLogic.class
+gameController.class
+Dealer.class
+startScreenController.class
+Deck.class
 Player.class
 Card.class
-Dealer.class
 ThreeCardPokerGame.class
+OptionsController.class

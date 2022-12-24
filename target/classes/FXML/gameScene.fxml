@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.shape.Rectangle?>
+<BorderPane xmlns:fx="http://javafx.com/fxml/1" fx:id = "gamePane" styleClass="border" fx:controller = "gameController">
+        <left><Button fx:id="options" text="Options" styleClass="button" onAction="#optionsMenu" /></left>
+        <center>
+                <VBox fx:id="root" styleClass="vbox">
+                        <HBox fx:id="dealerCards" styleClass="hbox">
+
+                                <ImageView fx:id="dC1" styleClass="dealerCard" fitWidth="120" fitHeight="150"/>
+                                <ImageView fx:id="dC2" styleClass="dealerCard" fitWidth="120" fitHeight="150"/>
+                                <ImageView fx:id="dC3" styleClass="dealerCard" fitWidth="120" fitHeight="150"/>
+
+                        </HBox>
+                        <HBox fx:id="playerCards" styleClass="hbox">
+
+                                <HBox fx:id="player1Cards" styleClass="hbox">
+                                        <ImageView fx:id="p1c1" fitWidth="95" fitHeight="130"/>
+                                        <ImageView fx:id="p1c2" fitWidth="95" fitHeight="130"/>
+                                        <ImageView fx:id="p1c3" fitWidth="95" fitHeight="130"/>
+                                </HBox>
+
+                                <HBox fx:id="player2Cards" styleClass="hbox">
+                                        <ImageView fx:id="p2c1" fitWidth="95" fitHeight="130"/>
+                                        <ImageView fx:id="p2c2" fitWidth="95" fitHeight="130"/>
+                                        <ImageView fx:id="p2c3" fitWidth="95" fitHeight="130"/>
+                                </HBox>
+
+                        </HBox>
+                        <HBox fx:id="playerInfo" styleClass="hbox">
+
+
+                                <VBox fx:id="player1Decision" styleClass="hbox">
+                                        <Button fx:id="play1" text="play" styleClass="button" onAction="#play1Action" disable="true"/>
+                                        <Button fx:id="fold1" text="fold" styleClass="button" onAction="#fold1Action" disable="true"/>
+                                </VBox>
+
+                                <VBox fx:id="bets1" styleClass="vbox">
+                                        <TextField fx:id="ante1" styleClass="bets" promptText="Ante"/>
+                                        <TextField fx:id="pairPlus1" styleClass="bets" promptText="Pair Plus"/>
+                                </VBox>
+
+
+                                <Button fx:id="deal" text="deal" styleClass="button" onAction="#dealAction"/>
+
+
+                                <VBox fx:id="bets2" styleClass="vbox">
+                                        <TextField fx:id="ante2" styleClass="bets" promptText="Ante"/>
+                                        <TextField fx:id="pairPlus2" styleClass="bets" promptText="Pair Plus"/>
+                                </VBox>
+
+                                <VBox fx:id="player2Decision" styleClass="hbox">
+                                        <Button fx:id="play2" text="play" styleClass="button" onAction="#play2Action" disable="true"/>
+                                        <Button fx:id="fold2" text="fold" styleClass="button" onAction="#fold2Action" disable="true"/>
+                                </VBox>
+                        </HBox>
+
+                        <HBox fx:id="winnings" styleClass="winningsArea">
+                                <HBox fx:id="totalWinningsP1" styleClass="totalWinnings">
+                                        <Text fx:id="player1Total" styleClass="textArea" />
+                                </HBox>
+
+                                <HBox fx:id="totalWinningsP2" styleClass="totalWinnings">
+                                        <Text fx:id="player2Total" styleClass="textArea" />
+                                </HBox>
+                        </HBox>
+
+                </VBox>
+        </center>
+</BorderPane>
