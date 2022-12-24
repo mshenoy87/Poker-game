@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml/1" fx:id = "optionsMenu" styleClass="border" fx:controller = "OptionsController">
+    <center>
+        <VBox fx:id="root" styleClass="vbox">
+            <Button fx:id="closeMenu" styleClass="button" text="Close Menu" onAction="#closeMenu" />
+            <Button fx:id="freshStart" styleClass="button" text="Fresh Start" />
+            <Button fx:id="newLook" styleClass="button" text="New Look"/>
+            <Button fx:id="exitToMenu" styleClass="button" text="Exit to Menu" onAction="#exitToMenu"/>
+        </VBox>
+    </center>
+
+</BorderPane>
